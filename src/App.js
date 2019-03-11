@@ -12,13 +12,14 @@ const ContentWrapper = styled.div({
   textAlign: 'center',
 })
 const InputWrapper = styled.div({
-  marginTop: 12,
+  marginBottom: 12,
 })
 
 // Component Definition
 class App extends Component {
   state = {
-    input: '',
+    email: '',
+    password: '',
   }
 
   handleClickButton = () => {
@@ -26,26 +27,39 @@ class App extends Component {
   }
 
   handleChangeInput = (e) => {
+    console.log(e.target.name)
     this.setState({
-      input: e.target.value,
+      [e.target.name]: e.target.value,
     })
   }
 
   render() {
     return (
       <ContentWrapper>
-        <Button onClick={this.handleClickButton}>
-          Click Me!
-        </Button>
-
         <InputWrapper>
           <Input
             ariaLabel="email"
+            name="email"
             onChange={this.handleChangeInput}
-            placeholder="Enter Text Here..."
-            value={this.state.input}
+            placeholder="Email"
+            value={this.state.email}
           />
         </InputWrapper>
+
+        <InputWrapper>
+          <Input
+            ariaLabel="password"
+            name="password"
+            onChange={this.handleChangeInput}
+            placeholder="Password"
+            type="password"
+            value={this.state.password}
+          />
+        </InputWrapper>
+
+        <Button onClick={this.handleClickButton}>
+          Sign Up
+        </Button>
       </ContentWrapper>
     );
   }

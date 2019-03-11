@@ -27,7 +27,8 @@ const StyledInput = styled.input({
 // Component Definition
 class Input extends Component {
   static propTypes = {
-    ariaLabel: PropTypes.shape.isRequired,
+    ariaLabel: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
     placeholder: PropTypes.string,
     type: PropTypes.string,
@@ -36,6 +37,7 @@ class Input extends Component {
 
   static defaultProps = {
     placeholder: null,
+    name: null,
     type: 'text',
   };
 
@@ -43,6 +45,7 @@ class Input extends Component {
     return (
       <StyledInput
         aria-label={this.props.ariaLabel}
+        name={this.props.name}
         onChange={this.props.onChange}
         placeholder={this.props.placeholder}
         type={this.props.type}
