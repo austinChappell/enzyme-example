@@ -1,9 +1,11 @@
+// External Dependencies
 import React from 'react';
 import {
   mount,
   shallow,
 } from 'enzyme';
 
+// Internal Dependencies
 import Drawer from '../components/Drawer';
 
 describe('<Drawer />', () => {

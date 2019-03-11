@@ -1,8 +1,11 @@
+// External Dependencies
 import React from 'react';
 import styled from 'styled-components';
 
+// Internal Dependencies
 import { COLORS } from '../constants/styles';
 
+// Local Variables
 const StyledButton = styled.button({
   background: `linear-gradient(120deg, ${COLORS.primaryMain}, ${COLORS.secondaryMain})`,
   borderRadius: 8,
@@ -15,6 +18,7 @@ const StyledButton = styled.button({
   }
 });
 
+// Component Definition
 const Button = ({
   children,
   disabled = false,
