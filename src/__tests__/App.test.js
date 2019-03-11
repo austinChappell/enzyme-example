@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from '../App';
-
 import { render } from 'enzyme';
+
+import App from '../App';
 
 describe('<App />', () => {
   it('renders without crashing', () => {
@@ -14,5 +14,5 @@ describe('<App />', () => {
   it('contains "Enzyme Demo"', () => {
     const wrapper = render(<App />);
     expect(wrapper.text()).toContain('Enzyme Testing Demo');
-  })
-})
+  });
+});
