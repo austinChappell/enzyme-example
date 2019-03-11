@@ -1,26 +1,39 @@
+// External Dependencies
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
 
+// Internal Dependencies
+import Button from './components/Button';
+import Input from './components/Input';
+
+// Local Variables
+const ContentWrapper = styled.div({
+  paddingTop: 100,
+  textAlign: 'center',
+})
+const InputWrapper = styled.div({
+  marginTop: 12,
+})
+
+// Component Definition
 class App extends Component {
+  handleButtonClick = () => {
+    console.log('button clicked');
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <ContentWrapper>
+        <Button onClick={this.handleButtonClick}>
+          Click Me!
+        </Button>
+
+        <InputWrapper>
+          <Input
+            placeholder="Enter Text Here..."
+          />
+        </InputWrapper>
+      </ContentWrapper>
     );
   }
 }
