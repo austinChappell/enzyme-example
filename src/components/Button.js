@@ -17,9 +17,13 @@ const StyledButton = styled.button({
 
 const Button = ({
   children,
+  disabled = false,
   onClick,
 }) => (
-  <StyledButton onClick={onClick}>
+  <StyledButton
+    disabled={disabled}
+    onClick={onClick}
+  >
     {children}
   </StyledButton>
 )

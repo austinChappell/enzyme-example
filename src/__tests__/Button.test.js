@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount, render, shallow } from 'enzyme'
+import { mount, shallow } from 'enzyme'
 
 import Button from '../components/button';
 
@@ -23,16 +23,20 @@ describe('The Button Component', () => {
     );
     wrapper.find('button').simulate('click')
     expect(mockClick).toHaveBeenCalled();
-  })
+  });
 
-  it('should change color on hover', () => {
+  it('should not trigger onClick if disabled', () => {
     const mockClick = jest.fn();
-    const wrapper = render(
-      <Button onClick={mockClick}>
+    const wrapper = mount(
+      <Button
+        disabled
+        onClick={mockClick}
+      >
         Click Me
       </Button>
     );
-    console.log('background', wrapper.get(0))
+    wrapper.find('button').simulate('click');
+    expect(mockClick).not.toHaveBeenCalled();
   })
 });
 

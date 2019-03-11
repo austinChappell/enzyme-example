@@ -1,13 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The Button Component should match snapshot 1`] = `
+exports[`<Input /> should match snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Button
-    onClick={[MockFunction]}
-  >
-    Click Me
-  </Button>,
+  Symbol(enzyme.__unrendered__): <Input
+    ariaLabel="email"
+    name="email"
+    onChange={[MockFunction]}
+    placeholder={null}
+    type="text"
+    value="Email"
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -22,12 +25,15 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "children": "Click Me",
-      "disabled": false,
-      "onClick": [MockFunction],
+      "aria-label": "email",
+      "name": "email",
+      "onChange": [MockFunction],
+      "placeholder": null,
+      "type": "text",
+      "value": "Email",
     },
     "ref": null,
-    "rendered": "Click Me",
+    "rendered": null,
     "type": Object {
       "$$typeof": Symbol(react.forward_ref),
       "attrs": Array [],
@@ -35,16 +41,19 @@ ShallowWrapper {
         "componentId": "sc-bdVaJa",
         "isStatic": true,
         "rules": Array [
-          "background: linear-gradient(120deg, #5C61DE, #DE6D25); border-radius: 8px; color: #fff; cursor: pointer; font-size: 20px; padding: 8px; &:hover {
-  background: linear-gradient(120deg, #42459E, #8C4517);
+          "border: 1px solid #5C61DE; border-radius: 8px; font-size: 16px; outline: none; padding: 8px; transition: 200ms; &:focus {
+  box-shadow: 1px 1px 4px #7C96FF,
+      -1px -1px 4px #7C96FF,
+      1px -1px 4px #7C96FF,
+      -1px 1px 4px #7C96FF;
 }",
         ],
       },
-      "displayName": "styled.button",
+      "displayName": "styled.input",
       "foldedComponentIds": Array [],
       "render": [Function],
       "styledComponentId": "sc-bdVaJa",
-      "target": "button",
+      "target": "input",
       "toString": [Function],
       "warnTooManyClasses": [Function],
       "withComponent": [Function],
@@ -56,12 +65,15 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "children": "Click Me",
-        "disabled": false,
-        "onClick": [MockFunction],
+        "aria-label": "email",
+        "name": "email",
+        "onChange": [MockFunction],
+        "placeholder": null,
+        "type": "text",
+        "value": "Email",
       },
       "ref": null,
-      "rendered": "Click Me",
+      "rendered": null,
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
@@ -69,16 +81,19 @@ ShallowWrapper {
           "componentId": "sc-bdVaJa",
           "isStatic": true,
           "rules": Array [
-            "background: linear-gradient(120deg, #5C61DE, #DE6D25); border-radius: 8px; color: #fff; cursor: pointer; font-size: 20px; padding: 8px; &:hover {
-  background: linear-gradient(120deg, #42459E, #8C4517);
+            "border: 1px solid #5C61DE; border-radius: 8px; font-size: 16px; outline: none; padding: 8px; transition: 200ms; &:focus {
+  box-shadow: 1px 1px 4px #7C96FF,
+      -1px -1px 4px #7C96FF,
+      1px -1px 4px #7C96FF,
+      -1px 1px 4px #7C96FF;
 }",
           ],
         },
-        "displayName": "styled.button",
+        "displayName": "styled.input",
         "foldedComponentIds": Array [],
         "render": [Function],
         "styledComponentId": "sc-bdVaJa",
-        "target": "button",
+        "target": "input",
         "toString": [Function],
         "warnTooManyClasses": [Function],
         "withComponent": [Function],
@@ -106,5 +121,6 @@ ShallowWrapper {
       },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;
