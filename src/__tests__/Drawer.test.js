@@ -13,4 +13,3 @@ describe('<Drawer />', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
-
