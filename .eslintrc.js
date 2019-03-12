@@ -9,6 +9,7 @@ module.exports = {
     SharedArrayBuffer: 'readonly',
     describe: true,
     it: true,
+    jest: true,
     expect: true,
   },
   parser: 'babel-eslint',
