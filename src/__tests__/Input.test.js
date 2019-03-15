@@ -29,4 +29,17 @@ describe('<Input />', () => {
     wrapper.find('input').simulate('change');
     expect(mockChange).toHaveBeenCalled();
   });
+
+  it('should call onChange programmatically', () => {
+    const mockChange = jest.fn();
+    const wrapper = mount(
+      <Input
+        ariaLabel="email"
+        onChange={mockChange}
+        value="myemail@gmail.com"
+      />,
+    );
+    wrapper.props().onChange();
+    expect(mockChange).toHaveBeenCalled();
+  });
 });

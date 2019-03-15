@@ -4,6 +4,7 @@ exports[`<Button /> should match snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Button
+    disabled={false}
     onClick={[Function]}
   >
     Click Me
@@ -23,6 +24,7 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": "Click Me",
+      "disabled": false,
       "onClick": [Function],
     },
     "ref": null,
@@ -56,6 +58,7 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": "Click Me",
+        "disabled": false,
         "onClick": [Function],
       },
       "ref": null,
